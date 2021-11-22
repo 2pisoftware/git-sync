@@ -10,7 +10,7 @@ REPOSITORY=$4
 SOURCE_REPO="https://${REPOSITORY_OWNER}:${GITHUB_TOKEN}@github.com/${REPOSITORY}.git"
 
 # Clone mirror from source repository
-git clone --mirror "$SOURCE_REPO" /root/source && cd /root/source
+git clone --bare "$SOURCE_REPO" /root/source && cd /root/source
 
 git remote add target "$TARGET_REPO"
 
